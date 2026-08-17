@@ -1,4 +1,4 @@
-const VERSION = 'v33';
+const VERSION = 'v34';
 const SHELL = ['./', 'index.html', 'manifest.json', 'icon-192.png', 'icon-512.png', 'data.enc'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL).catch(()=>{})).then(()=>self.skipWaiting()));
